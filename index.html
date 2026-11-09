@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>CONTACT FORM</title>
+  </head>
+  <body>
+    <!-- ===============================TOASTER MESSAGE======================== -->
+    <div
+      class="flex justify-center absolute sm:left-[35%] sm:right-[35%] top-[10px] left-[15%] right-[15%]"
+    >
+      <div
+        class="success bg-[#06382e] text-white rounded-2xl p-5 flex flex-col items-start gap-3 sm:w-[350px] w-[250px] hidden"
+      >
+        <div class="flex items-center gap-2">
+          <img src="./assets/images/icon-success-check.svg" alt="" />
+          <h3>Message Sent</h3>
+        </div>
+
+        <p class="text-[12px]">
+          Thanks for completing form. We'll be in touch soon!
+        </p>
+      </div>
+    </div>
+    <!-- =======================================FORM============================================= -->
+    <div
+      class="main-con bg-white w-[345px] sm:w-full sm:max-w-[600px] mx-auto my-[30px] sm:my-[100px] p-7.5 rounded-2xl flex flex-col gap-8"
+    >
+      <h2 class="text-[32px] font-bold text-[var(--Grey900)]">Contact Us</h2>
+      <form
+        action=""
+        class="contactForm w-full flex flex-col items-start gap-6"
+      >
+        <!-- ======================NAME FIELD================================== -->
+
+        <div
+          class="flex flex-col sm:flex-row sm:items-center items-start gap-4 w-full"
+        >
+          <div class="flex-1 flex flex-col gap-2 w-full h-[85px]">
+            <label for="f-name" class="font-normal text-[var(--Grey900)]"
+              >First Name
+              <span class="ml-2 text-[var(--Green600)]">*</span></label
+            >
+            <input
+              type="text"
+              class="firstName w-full border border-[var(--Grey500)] text-[var(--Grey900)] rounded-md px-4 py-2 cursor-pointer hover:border-[var(--Green600)]"
+              name="f-name"
+            />
+            <span class="error-fn text-[14px] text-[var(--Red)] hidden"
+              >This field is required</span
+            >
+          </div>
+          <div class="flex-1 flex flex-col gap-2 w-full h-[85px]">
+            <label for="l-name" class="font-normal text-[var(--Grey900)]"
+              >Last Name
+              <span class="ml-2 text-[var(--Green600)]">*</span></label
+            >
+            <input
+              type="text"
+              class="lastName w-full border border-[var(--Grey500)] text-[var(--Grey900)] rounded-md px-4 py-2 cursor-pointer hover:border-[var(--Green600)]"
+              name="l-name"
+            />
+            <span class="error-ln text-[14px] text-[var(--Red)] hidden"
+              >This field is required</span
+            >
+          </div>
+        </div>
+        <!-- =======================EMAIL FIELD================================= -->
+        <div class="w-full flex flex-col gap-2">
+          <label for="email-add" class="font-normal text-[var(--Grey900)]"
+            >Email Address
+            <span class="ml-2 text-[var(--Green600)]">*</span></label
+          >
+          <input
+            type="email"
+            class="emailAddress border border-[var(--Grey500)] text-[var(--Grey900)] rounded-md px-4 py-2 w-full cursor-pointer hover:border-[var(--Green600)]"
+            name="email-add"
+          />
+          <span class="error-em text-[14px] text-[var(--Red)] hidden"
+            >Please enter a valid email address</span
+          >
+        </div>
+        <!-- ========================QUERY TYPE================================ -->
+
+        <div class="w-full flex flex-col gap-2">
+          <label for="q-type" class="font-normal text-[var(--Grey900)]"
+            >Query Type
+            <span class="ml-2 text-[var(--Green600)]">*</span></label
+          >
+          <div class="flex flex-col sm:flex-row items-center gap-4 w-full">
+            <div
+              class="border w-full flex-1 flex gap-3 px-4 py-2 border-[var(--Grey500)] rounded-md hover:border-[var(--Green600)]"
+            >
+              <input
+                type="radio"
+                class="query cursor-pointer hover:border-[var(--Green600)] accent-[var(--Green600)]"
+                name="q-type"
+                value="General Enquiry"
+              />
+              <label for="" class="font-normal text-[var(--Grey900)]"
+                >General Enquiry</label
+              >
+            </div>
+
+            <div
+              class="border w-full flex-1 flex gap-3 px-4 py-2 border-[var(--Grey500)] rounded-md hover:border-[var(--Green600)]"
+            >
+              <input
+                type="radio"
+                class="query cursor-pointer hover:border-[var(--Green600)] accent-[var(--Green600)]"
+                name="q-type"
+                value="Support Request"
+              />
+              <label for="" class="font-normal text-[var(--Grey900)]"
+                >Support Request</label
+              >
+            </div>
+          </div>
+          <span class="error-qt text-[14px] text-[var(--Red)] hidden"
+            >Please select a query type</span
+          >
+        </div>
+        <!-- =========================MESSAGE FIELD=============================== -->
+
+        <div class="w-full flex flex-col gap-2">
+          <label for="" class="font-normal text-[var(--Grey900)]"
+            >Message <span class="ml-2 text-[var(--Green600)]">*</span></label
+          >
+          <textarea
+            name=""
+            rows="4"
+            class="messageContent cursor-pointer text-[var(--Grey900)] border flex sm:flex-1 h-60 gap-3 px-4 py-2 border-[var(--Grey500)] rounded-md hover:border-[var(--Green600)] resize-none w-full"
+          ></textarea>
+          <span class="error-msg text-[14px] text-[var(--Red)] hidden"
+            >This field is required</span
+          >
+        </div>
+        <!-- ===========================CONSENT============================== -->
+
+        <div class="flex flex-col items-start gap-2">
+          <div class="flex items-center gap-3 cursor-pointer">
+            <input
+              type="checkbox"
+              class="consent cursor-pointer hover:border-[var(--Green600)] accent-[var(--Green600)]"
+            />
+            <p class="text-[14px] font-normal text-[var(--Grey900)]">
+              I consent to being contacted by the team
+              <span class="ml-2 text-[var(--Green600)]">*</span>
+            </p>
+          </div>
+          <span class="error-checkbox text-[14px] text-[var(--Red)] hidden"
+            >To submit this form, please consent to being contacted</span
+          >
+        </div>
+        <!-- ============================submit button============================== -->
+        <button
+          class="button border w-full py-3 rounded-md text-white font-bold bg-[var(--Green600)] hover:bg-[#06382e] cursor-pointer"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+    <!-- =============================JAVASCRIPT LINK=======================================  -->
+    <script src="./main.js"></script>
+  </body>
+</html>
